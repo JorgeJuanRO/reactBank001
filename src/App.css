@@ -1,17 +1,24 @@
 .App {
   text-align: center;
 }
-nav{
-  display:flex;
+nav {
+  display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
   background: blueviolet;
-  color:white
+  color: white;
 }
-.nav-links{
-  width:50%;
-  display:flex;
+.nav-links {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.nav-links2 {
+  width: 50%;
+  display: vertical;
   justify-content: space-around;
   align-items: center;
   list-style: none;

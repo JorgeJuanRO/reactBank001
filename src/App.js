@@ -1,33 +1,33 @@
-import React from 'react';
+import React from "react";
 //import logo from './logo.svg';
-import './App.css';
-import user from './user';
-import deposit from './deposit';
-import withdraw from './withdraw';
-import Nav from './Nav';
-import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import "./App.css";
+import Deposit from "./components/deposit";
+import Withdraw from "./components/withdraw";
+import Users from "./components/users";
+
+import Nav from "./Nav";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
     <Router>
-    <div className="App">
-
-     <Nav/>
-     <Switch>
-      <Route path='/' exact component = {home} />
-      <Route path='/user' component = {user} />
-      <Route path='/deposit' component = {deposit} />
-      <Route path= '/withdraw' component = {withdraw}/> 
-     </Switch>
-    </div>
+      <div className="App">
+        <Nav />
+        <Switch>
+          <Route path="/" exact component={home} />
+          <Route path="/users" component={Users} />
+          <Route path="/deposit" component={Deposit} />
+          <Route path="/withdraw" component={Withdraw} />
+        </Switch>
+      </div>
     </Router>
   );
 }
 const home = () => {
   return (
-  <div>
-    <h1>Home Page</h1>
-  </div>
-  )
- };
- 
+    <div>
+      <h1>Home Page</h1>
+    </div>
+  );
+};
+
 export default App;
