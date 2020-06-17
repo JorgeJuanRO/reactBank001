@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-
+import { Button } from "react-bootstrap";
 function Users() {
   const history = useHistory();
   const users = localStorage.getItem("users");
@@ -19,21 +19,25 @@ function Users() {
       <ul className="nav-links2">
         {userData.map((user) => (
           <li key={user.name} value={user.balance}>
-            <button
+            <Button
               className="btn btn-secondary btn-sm"
               key={user.name}
               onClick={(event) => goDeposit(user.name)}
             >
               deposit
-            </button>
-            {JSON.stringify(user)}
-            <button
+            </Button>
+            <span className="badge badge-primary m-2">
+              <h4>
+                {user.name}: balance: {user.balance}
+              </h4>
+            </span>
+            <Button
               className="btn btn-secondary btn-sm"
               key={user.name}
               onClick={(event) => goWithdraw(user.name)}
             >
               Withdraw
-            </button>
+            </Button>
           </li>
         ))}
       </ul>

@@ -25,7 +25,7 @@ function App() {
 const home = () => {
   return (
     <div>
-      <h1>Home Page</h1>
+      <h1>Bank has been Initialized</h1>
     </div>
   );
 };

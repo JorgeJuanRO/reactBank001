@@ -1,10 +1,6 @@
 import React from "react";
 
 function User() {
-  const name = this.key
-  var userData = localStorage.getItem('users');
-  user = userData.filter(item=>if(item.name == name));
-
   return (
     <div
       style={{

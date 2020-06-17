@@ -8,11 +8,9 @@ function SetupBank() {
     { name: "anne", balance: 0 },
     { name: "joan", balance: 0 },
   ];
+
   localStorage.setItem("users", JSON.stringify(userData));
 
-  function goUsers() {
-    history.push("/users");
-  }
   const renderUsers = () => {
     return (
       <ul className="nav-links2">
